@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h, JSX } from "preact";
-import { css, tw } from "@twind";
+import { tw } from "@twind";
 
 const menuItems = {
   hr: [
