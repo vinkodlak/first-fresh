@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tag/
+Disallow: /en/tag/
+Disallow: /mk/tag/
+Disallow: /sr/tag/
