@@ -19,14 +19,22 @@ const HeroFeatured = (
       class={tw`col-span-5 h-[370px] overflow-hidden relative`}
     >
       <a href={`/${uri}`}>
-        <img
-          class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
-          src={src}
-          loading="eager"
-          // @ts-ignore-ignore
-          fetchpriority="high"
-          alt={title}
-        />
+        <picture>
+          <source
+            srcset="https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjIwMCwiZml0IjoiaW5zaWRlIn19fQ== 200w,https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiZml0IjoiaW5zaWRlIn19fQ== 400w,https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiZml0IjoiaW5zaWRlIn19fQ== 800w"
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
+          <img
+            class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
+            loading="eager"
+            sizes="(max-width: 800px) 100vw, 800px"
+            srcset="https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjIwMCwiZml0IjoiaW5zaWRlIn19fQ== 200w,https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiZml0IjoiaW5zaWRlIn19fQ== 400w,https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiZml0IjoiaW5zaWRlIn19fQ== 800w"
+            src="https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGcifQ=="
+            alt={title}
+            // @ts-ignore-ignore
+            fetchpriority="high"
+          />
+        </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
           <div>{title}</div>
           {/* <Published date={date} /> */}
