@@ -11,6 +11,12 @@ export default function App(props: AppProps) {
       <Head>
         <title>Hello from fresh</title>
         <meta name="description" content="Hello world from fresh!" />
+        <link
+          rel="dns-prefetch"
+          href="https://images-ta.vinko.me"
+          crossOrigin="true"
+        />
+        <link rel="preconnect" href="https://images-ta.vinko.me" />
       </Head>
       <Header />
       <props.Component />
