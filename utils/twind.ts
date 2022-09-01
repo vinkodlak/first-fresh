@@ -6,11 +6,11 @@ export const config: Configuration = {
   darkMode: "class",
   mode: "silent",
   theme: {
-    colors: {
-      "ta_blue": "#07819C", //"#0886a3",
-      "ta_link_blue": "#1bc1d3",
-    },
     extend: {
+      colors: {
+        "ta_blue": "#07819C", //"#0886a3",
+        "ta_link_blue": "#1bc1d3",
+      },
       spacing: {
         header: "3rem",
       },
