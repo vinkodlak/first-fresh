@@ -42,7 +42,7 @@ const customStyle = css({
 
 export const Header = (): JSX.Element => {
   return (
-    <header class={tw(customStyle)}>
+    <header class={tw`${customStyle}`}>
       <a href="/">
         <img
           src="/images/Travel-Advisor-Logo.png"
@@ -51,8 +51,10 @@ export const Header = (): JSX.Element => {
           alt="Travel Advisor"
         />
       </a>
-      <nav class={tw`bg-ta_blue`}>
-        <div class={tw`flex items-center justify-between flex-wrap`}>
+      <nav class={tw`grid grid-cols-main_grid_md bg-ta_blue`}>
+        <div
+          class={tw`col-start-2 col-span-12 flex items-center justify-between flex-wrap`}
+        >
           <Menu />
           <FlagMenu />
         </div>

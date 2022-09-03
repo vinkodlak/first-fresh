@@ -14,6 +14,14 @@ export const config: Configuration = {
       spacing: {
         header: "3rem",
       },
+      gridTemplateColumns: {
+        main_grid: "12px repeat(12, 1fr) 12px",
+        main_grid_md:
+          "minmax(0px, 1fr) repeat(12, minmax(auto, var(--col))) minmax(0px, 1fr)",
+      },
+      gap: {
+        "main": "var(--grid-gap)",
+      },
     },
   },
 };
