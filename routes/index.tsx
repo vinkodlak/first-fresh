@@ -112,12 +112,12 @@ const HeroFeatured = (
         <picture>
           <source
             srcset={srcset}
-            sizes="(max-width: 800px) 100vw, 800px"
+            sizes="(max-width: 768px) 100vw, 550px"
           />
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             loading="eager"
-            sizes="(max-width: 800px) 100vw, 800px"
+            sizes="(max-width: 768px) 100vw, 550px"
             srcset={srcset}
             src={src}
             alt={title}
@@ -135,21 +135,29 @@ const HeroFeatured = (
 };
 
 const HeroItem = (
-  { uri, src, title, date }: HeroFeaturedProps,
+  { uri, src, srcset, title, date }: HeroFeaturedProps,
 ): JSX.Element => {
   return (
     <div
       class={tw`col-span-2 h-[140px] overflow-hidden relative`}
     >
       <a href={`/${uri}`}>
-        <img
-          class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
-          src={src}
-          loading="eager"
-          // @ts-ignore-ignore
-          fetchpriority="high"
-          alt={title}
-        />
+        <picture>
+          <source
+            srcset={srcset}
+            sizes="(max-width: 768px) 100vw, 220px"
+          />
+          <img
+            class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
+            loading="eager"
+            sizes="(max-width: 768px) 100vw, 220px"
+            srcset={srcset}
+            src={src}
+            alt={title}
+            // @ts-ignore-ignore
+            fetchpriority="high"
+          />
+        </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
           <div>{title}</div>
           {/* <Published date={date} /> */}
