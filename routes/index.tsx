@@ -153,7 +153,7 @@ const HeroItem = (
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             // loading="auto"
-            sizes="220px"
+            sizes="100vw"
             srcset={srcset}
             src={src}
             alt={title}
