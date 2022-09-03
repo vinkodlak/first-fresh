@@ -41,7 +41,7 @@ const heroItems = [
     uri: "/test3",
     src: "/images/3.webp",
     srcset:
-      "/imag3_200x133.webp 200w, /imag3_400x267.webp 700w, /imag3_800x533.webp 800w",
+      "/images/3_200x150.webp 200w, /images/3_400x300.webp 700w, /images/3_800x600.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvSU1HXzIwMjIwNjIwXzExMzIyOS5qcGcifQ==",
     srcsetOri:
