@@ -149,13 +149,13 @@ const HeroItem = (
           />
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
-            loading="eager"
+            loading="auto"
             sizes="(max-width: 768px) 100vw, 220px"
             srcset={srcset}
             src={src}
             alt={title}
             // @ts-ignore-ignore
-            fetchpriority="high"
+            // fetchpriority="high"
           />
         </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
