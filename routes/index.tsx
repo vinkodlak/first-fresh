@@ -29,7 +29,7 @@ const heroItems = [
     uri: "/test2",
     src: "/images/2.webp",
     srcset:
-      "/images/1_200x133.webp 200w, /images/1_400_267.webp 700w, /images/1_800x533.webp 800w",
+      "/images/2_200x133.webp 200w, /images/2_400_267.webp 700w, /images/2_800x533.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjEvMDkvZ2lhbmFuZHJlYS12aWxsYS1SY3VxT2p4VFkydy11bnNwbGFzaC1zY2FsZWQtZTE2MzIzNDg3NDM2OTMuanBnIn0=",
     srcsetOri:
