@@ -17,7 +17,7 @@ const heroItems = [
     uri: "/test",
     src: "/images/1.webp",
     srcset:
-      "/images/1_200x133.webp 200w, /images/1_400x267.webp 700w, /images/1_800x533.webp 800w",
+      "/images/1_200x133.webp 200w, /images/1_400x267.webp 400w, /images/1_800x533.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvYW50ZS1zYW1hcnppamEtQ1k0RUNOaDNlRVktdW5zcGxhc2gtMi5qcGcifQ==",
     srcsetOri:
@@ -29,7 +29,7 @@ const heroItems = [
     uri: "/test2",
     src: "/images/2.webp",
     srcset:
-      "/images/2_200x133.webp 200w, /images/2_400x267.webp 700w, /images/2_800x533.webp 800w",
+      "/images/2_200x133.webp 200w, /images/2_400x267.webp 400w, /images/2_800x533.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjEvMDkvZ2lhbmFuZHJlYS12aWxsYS1SY3VxT2p4VFkydy11bnNwbGFzaC1zY2FsZWQtZTE2MzIzNDg3NDM2OTMuanBnIn0=",
     srcsetOri:
@@ -41,7 +41,7 @@ const heroItems = [
     uri: "/test3",
     src: "/images/3.webp",
     srcset:
-      "/images/3_200x150.webp 200w, /images/3_400x300.webp 700w, /images/3_800x600.webp 800w",
+      "/images/3_200x150.webp 200w, /images/3_400x300.webp 400w, /images/3_800x600.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvSU1HXzIwMjIwNjIwXzExMzIyOS5qcGcifQ==",
     srcsetOri:
@@ -53,7 +53,7 @@ const heroItems = [
     uri: "/test4",
     src: "/images/4.webp",
     srcset:
-      "/images/4_200x140.webp 200w, /images/4_400x281.webp 700w, /images/4_800x561.webp 800w",
+      "/images/4_200x140.webp 200w, /images/4_400x281.webp 400w, /images/4_800x561.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMTgvMDkvb2t0b2JlcmZlc3QtMjc2Mjk3M18xMjgwLWUxNTM3Njg4MDcxMTA5LmpwZyJ9",
     srcsetOri:
@@ -64,8 +64,9 @@ const heroItems = [
   {
     uri: "/test5",
     src: "/images/5.webp",
-    srcset:
-      "/images/5_200x145.webp 200w, /images/5_400x289.webp 700w, /images/5_800x578.webp 800w",
+    srcset: "/images/5_200x145.webp 200w, \
+            /images/5_400x289.webp 400w, \
+            /images/5_800x578.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvdW5uYW1lZC0xLTUucG5nIn0=",
     srcsetOri:
@@ -77,7 +78,7 @@ const heroItems = [
     uri: "/test6",
     src: "/images/6.webp",
     srcset:
-      "/images/6_200x133.webp 200w, /images/6_400x266.webp 700w, /images/6_800x532.webp 800w",
+      "/images/6_200x133.webp 200w, /images/6_400x266.webp 400w, /images/6_800x532.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvRFNDNzgxOS5qcGcifQ==",
     srcsetOri:
@@ -90,7 +91,7 @@ const heroItems = [
     uri: "/test7",
     src: "/images/7.webp",
     srcset:
-      "/images/7_200x267.webp 200w, /images/7_400x533.webp 700w, /images/7_600x800.webp 800w",
+      "/images/7_200x267.webp 200w, /images/7_400x533.webp 400w, /images/7_600x800.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvdmVydGlrYWxuaS12cnRvdmktaG9ydGlhcnQxLmpwZyJ9",
     srcsetOri:
@@ -143,14 +144,16 @@ const HeroItem = (
     >
       <a href={`/${uri}`}>
         <picture>
-          <source
+          {
+            /* <source
             srcset={srcset}
             sizes="(max-width: 768px) 100vw, 220px"
-          />
+          /> */
+          }
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             // loading="auto"
-            sizes="(max-width: 768px) 100vw, 220px"
+            sizes="220px"
             srcset={srcset}
             src={src}
             alt={title}
