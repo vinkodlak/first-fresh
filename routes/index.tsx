@@ -40,30 +40,30 @@ const heroItems = [
   {
     uri: "/test3",
     src: "/images/3.webp",
-    srcset: " \
-    https://placehold.jp/150x112.png 150w, \
-    https://placehold.jp/200x150.png 200w, \
-    https://placehold.jp/250x188.png 250w, \
-    https://placehold.jp/300x224.png 300w, \
-    https://placehold.jp/350x262.png 350w, \
-    https://placehold.jp/400x300.png 400w, \
-    https://placehold.jp/450x338.png 450w, \
-    https://placehold.jp/500x376.png 500w, \
-    https://placehold.jp/550x412.png 550w, \
-    https://placehold.jp/600x448.png 600w, \
-    https://placehold.jp/650x487.png 650w, \
-    https://placehold.jp/700x524.png 700w, \
-    https://placehold.jp/750x563.png 750w, \
-    https://placehold.jp/800x600.png 800w, \
-    https://placehold.jp/850x638.png 850w, \
-    https://placehold.jp/900x672.png 900w, \
-    https://placehold.jp/950x710.png 950w, \
-    https://placehold.jp/1000x752.png 1000w, \
-    https://placehold.jp/1050x787.png 1050w, \
-    https://placehold.jp/1100x824.png 1100w, \
-    https://placehold.jp/100x75.png 100w\
-    ",
-    // "/images/3_200x150.webp 200w, /images/3_400x300.webp 400w, /images/3_800x600.webp 800w",
+    srcset:
+      // https://placehold.jp/150x112.png 150w, \
+      // https://placehold.jp/200x150.png 200w, \
+      // https://placehold.jp/250x188.png 250w, \
+      // https://placehold.jp/300x224.png 300w, \
+      // https://placehold.jp/350x262.png 350w, \
+      // https://placehold.jp/400x300.png 400w, \
+      // https://placehold.jp/450x338.png 450w, \
+      // https://placehold.jp/500x376.png 500w, \
+      // https://placehold.jp/550x412.png 550w, \
+      // https://placehold.jp/600x448.png 600w, \
+      // https://placehold.jp/650x487.png 650w, \
+      // https://placehold.jp/700x524.png 700w, \
+      // https://placehold.jp/750x563.png 750w, \
+      // https://placehold.jp/800x600.png 800w, \
+      // https://placehold.jp/850x638.png 850w, \
+      // https://placehold.jp/900x672.png 900w, \
+      // https://placehold.jp/950x710.png 950w, \
+      // https://placehold.jp/1000x752.png 1000w, \
+      // https://placehold.jp/1050x787.png 1050w, \
+      // https://placehold.jp/1100x824.png 1100w, \
+      // https://placehold.jp/100x75.png 100w\
+      // ",
+      "/images/3_200x150.webp 200w, /images/3_400x300.webp 400w, /images/3_800x600.webp 800w",
     srcOri:
       "https://images-ta.vinko.me/eyJidWNrZXQiOiJpbWFnZXMtdGEiLCJrZXkiOiJ1cGxvYWRzLzIwMjIvMDgvSU1HXzIwMjIwNjIwXzExMzIyOS5qcGcifQ==",
     srcsetOri:
@@ -166,25 +166,13 @@ const HeroItem = (
     >
       <a href={`/${uri}`}>
         <picture>
-          {
-            /* <source
+          <source
             srcset={srcset}
-            sizes="(max-width: 768px) 100vw, 220px"
-          /> */
-          }
+            sizes="(min-width: 768px) 12vw, 100vw"
+          />
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             loading="lazy"
-            // sizes="100vw"
-            //       sizes="(max-width: 100px) 100px,\
-            //       (max-width: 200px) 200px,\
-            //       (max-width: 300px) 300px,\
-            //       (max-width: 400px) 400px,\
-            //       (max-width: 500px) 500px,\
-            //       (max-width: 600px) 600px,\
-            //       (max-width: 700px) 700px,\
-            //       (max-width: 767px) 800px,\
-            //  220px"
             sizes="(min-width: 768px) 12vw, 100vw"
             srcset={srcset}
             src={src}
