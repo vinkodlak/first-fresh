@@ -135,12 +135,12 @@ const HeroFeatured = (
         <picture>
           <source
             srcset={srcset}
-            sizes="(max-width: 768px) 100vw, 550px"
+            sizes="(min-width: 768px) 46vw, 100vw"
           />
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             loading="eager"
-            sizes="(max-width: 768px) 100vw, 550px"
+            sizes="(min-width: 768px) 46vw, 100vw"
             srcset={srcset}
             src={src}
             alt={title}
@@ -185,16 +185,7 @@ const HeroItem = (
             //       (max-width: 700px) 700px,\
             //       (max-width: 767px) 800px,\
             //  220px"
-            sizes="\
-            (min-width: 768px) 220px,\
-            (min-width: 700px) 700px,\
-            (min-width: 600px) 600px,\
-            (min-width: 500px) 500px,\
-            (min-width: 400px) 400px,\
-            (min-width: 300px) 300px,\
-            (min-width: 200px) 200px,\
-            (min-width: 100px) 100px,\
-        200px"
+            sizes="(min-width: 768px) 12vw, 100vw"
             srcset={srcset}
             src={src}
             alt={title}

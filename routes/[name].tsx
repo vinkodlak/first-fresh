@@ -25,7 +25,7 @@ export default function ResponsiveImage() {
       "
       width="1800"
       height="1800"
-      sizes="(min-width: 768px) 550px, 100vw"
+      sizes="(min-width: 768px) 46vw, 100vw"
       alt="Responsive image try to figure out."
     />
     // </div>
