@@ -40,7 +40,7 @@ const heroItems = [
   {
     uri: "/test3",
     src: "/images/3.webp",
-    srcset: "https://placehold.jp/100x75.png 100w \
+    srcset: " \
     https://placehold.jp/150x112.png 150w, \
     https://placehold.jp/200x150.png 200w, \
     https://placehold.jp/250x188.png 250w, \
@@ -61,6 +61,7 @@ const heroItems = [
     https://placehold.jp/1000x752.png 1000w, \
     https://placehold.jp/1050x787.png 1050w, \
     https://placehold.jp/1100x824.png 1100w, \
+    https://placehold.jp/100x75.png 100w\
     ",
     // "/images/3_200x150.webp 200w, /images/3_400x300.webp 400w, /images/3_800x600.webp 800w",
     srcOri:
@@ -174,10 +175,31 @@ const HeroItem = (
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             // loading="auto"
-            sizes="100vw"
+            // sizes="100vw"
+            //       sizes="(max-width: 100px) 100px,\
+            //       (max-width: 200px) 200px,\
+            //       (max-width: 300px) 300px,\
+            //       (max-width: 400px) 400px,\
+            //       (max-width: 500px) 500px,\
+            //       (max-width: 600px) 600px,\
+            //       (max-width: 700px) 700px,\
+            //       (max-width: 767px) 800px,\
+            //  220px"
+            sizes="\
+            (min-width: 768px) 220px,\
+            (min-width: 700px) 700px,\
+            (min-width: 600px) 600px,\
+            (min-width: 500px) 500px,\
+            (min-width: 400px) 400px,\
+            (min-width: 300px) 300px,\
+            (min-width: 200px) 200px,\
+            (min-width: 100px) 100px,\
+        200px"
             srcset={srcset}
             src={src}
             alt={title}
+            width="1100"
+            height="824"
             // @ts-ignore-ignore
             // fetchpriority="high"
           />
