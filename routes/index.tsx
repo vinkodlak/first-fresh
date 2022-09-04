@@ -174,7 +174,7 @@ const HeroItem = (
           }
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
-            // loading="auto"
+            loading="lazy"
             // sizes="100vw"
             //       sizes="(max-width: 100px) 100px,\
             //       (max-width: 200px) 200px,\
