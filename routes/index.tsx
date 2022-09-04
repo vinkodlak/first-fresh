@@ -57,7 +57,7 @@ const heroItems = [
     https://placehold.jp/800x600.png 800w, \
     https://placehold.jp/850x638.png 850w, \
     https://placehold.jp/900x672.png 900w, \
-    https://placehold.jp/950x420.png 950w, \
+    https://placehold.jp/950x710.png 950w, \
     https://placehold.jp/1000x752.png 1000w, \
     https://placehold.jp/1050x787.png 1050w, \
     https://placehold.jp/1100x824.png 1100w, \
