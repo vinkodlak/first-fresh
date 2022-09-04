@@ -162,7 +162,7 @@ const HeroItem = (
 ): JSX.Element => {
   return (
     <div
-      class={tw`col-span-full md:col-span-2 h-[140px] md:h-[270px] overflow-hidden relative`}
+      class={tw`col-span-full md:col-span-2 h-[270px] md:h-[140px] overflow-hidden relative`}
     >
       <a href={`/${uri}`}>
         <picture>
