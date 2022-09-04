@@ -4,11 +4,11 @@ import { tw } from "../utils/twind.ts";
 
 export default function ResponsiveImage() {
   return (
-    <div class={tw`grid grid-cols-12`}>
-      <img
-        class={tw`col-span-full md:col-span-6 w-full`}
-        src="https://placehold.jp/1800x1800.png"
-        srcset="
+    // <div class={tw`grid grid-cols-12`}>
+    <img
+      class={tw`col-span-full md:col-span-6 md:col-start-2 w-full`}
+      src="https://placehold.jp/1800x1800.png"
+      srcset="
       https://placehold.jp/500x500.png 500w,
       https://placehold.jp/600x600.png 600w,
       https://placehold.jp/700x700.png 700w,
@@ -23,11 +23,11 @@ export default function ResponsiveImage() {
       https://placehold.jp/1600x1600.png 1600w,
       https://placehold.jp/1700x1700.png 1700w,
       "
-        width="1800"
-        height="1800"
-        sizes="(min-width: 768px) 50vw, 100vw"
-        alt="Responsive image try to figure out."
-      />
-    </div>
+      width="1800"
+      height="1800"
+      sizes="(min-width: 768px) 550px, 100vw"
+      alt="Responsive image try to figure out."
+    />
+    // </div>
   );
 }

@@ -33,14 +33,11 @@ export default function App(props: AppProps) {
         <link rel="preconnect" href="https://images-ta.vinko.me" />
       </Head>
       <Header />
-      {
-        /*
       <div
         class={tw`grid grid-cols-main_grid gap-x-main md:grid-cols-main_grid_md ${customStyle}`}
-      > */
-      }
-      <props.Component />
-      {/* </div> */}
+      >
+        <props.Component />
+      </div>
     </>
   );
 }
