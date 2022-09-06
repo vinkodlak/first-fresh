@@ -43,7 +43,7 @@ const customStyle = css({
 export const Header = (): JSX.Element => {
   return (
     <header class={tw`${customStyle}`}>
-      <a href="/">
+      <a class={tw`invisible md:visible`} href="/">
         <img
           src="/images/Travel-Advisor-Logo.png"
           width="272"
