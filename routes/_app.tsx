@@ -31,17 +31,6 @@ export default function App(props: AppProps) {
           crossOrigin="true"
         />
         <link rel="preconnect" href="https://images-ta.vinko.me" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jura&display=swap"
-          rel="preload"
-          as="style"
-        />
       </Head>
       <Header />
       <div

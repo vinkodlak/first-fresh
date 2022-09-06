@@ -46,7 +46,7 @@ const language = "hr";
 
 export const Menu = ({ languagePath = "" }): JSX.Element => {
   return (
-    <ul class={tw`flex text-uppercase`}>
+    <ul class={tw`flex text-uppercase font-jura`}>
       {menuItems[language].map((menuItem, index) => (
         <li key={index}>
           <a href={`/${languagePath}${menuItem.link}`}>

@@ -8,7 +8,7 @@ export const config: Configuration = {
   theme: {
     extend: {
       fontFamily: {
-        jura: "jura, sans-serif",
+        jura: "'Jura', sans-serif",
       },
       colors: {
         "ta_blue": "#07819C", //"#0886a3",
@@ -26,6 +26,10 @@ export const config: Configuration = {
         "main": "var(--grid-gap)",
       },
     },
+  },
+  preflight: {
+    "@import":
+      "url(https://fonts.googleapis.com/css2?family=Jura&display=swap)",
   },
 };
 if (IS_BROWSER) setup(config);
