@@ -28,8 +28,15 @@ export const config: Configuration = {
     },
   },
   preflight: {
-    "@import":
-      "url(https://fonts.googleapis.com/css2?family=Jura&display=swap)",
+    // "@import":
+    //   "url(https://fonts.googleapis.com/css2?family=Jura&display=swap)",
+    "@font-face": [
+      {
+        fontFamily: "Jura",
+        fontWeight: "400",
+        src: 'url(/fonts/Jura.woff2) format("woff2")',
+      },
+    ],
   },
 };
 if (IS_BROWSER) setup(config);
