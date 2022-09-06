@@ -39,7 +39,8 @@ export default function App(props: AppProps) {
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Jura&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="style"
         />
       </Head>
       <Header />
