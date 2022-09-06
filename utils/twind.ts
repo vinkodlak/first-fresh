@@ -35,6 +35,7 @@ export const config: Configuration = {
         fontFamily: "Jura",
         fontWeight: "400",
         src: 'url(/fonts/Jura.woff2) format("woff2")',
+        fontDisplay: "swap",
       },
     ],
   },
