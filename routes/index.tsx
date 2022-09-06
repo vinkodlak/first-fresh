@@ -134,15 +134,15 @@ const HeroFeatured = (
       <a href={`/${uri}`}>
         <picture>
           <source
-            srcset={srcset}
+            srcset={srcsetOri}
             sizes="(min-width: 768px) 46vw, 100vw"
           />
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             loading="eager"
             sizes="(min-width: 768px) 46vw, 100vw"
-            srcset={srcset}
-            src={src}
+            srcset={srcsetOri}
+            src={srcOri}
             alt={title}
             // @ts-ignore-ignore
             fetchpriority="high"
@@ -158,7 +158,7 @@ const HeroFeatured = (
 };
 
 const HeroItem = (
-  { uri, src, srcset, title, date }: HeroFeaturedProps,
+  { uri, src, srcset, srcsetOri, srcOri, title, date }: HeroFeaturedProps,
 ): JSX.Element => {
   return (
     <div
@@ -167,15 +167,15 @@ const HeroItem = (
       <a href={`/${uri}`}>
         <picture>
           <source
-            srcset={srcset}
+            srcset={srcsetOri}
             sizes="(min-width: 768px) 12vw, 100vw"
           />
           <img
             class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
             loading="lazy"
             sizes="(min-width: 768px) 12vw, 100vw"
-            srcset={srcset}
-            src={src}
+            srcset={srcsetOri}
+            src={srcOri}
             alt={title}
             width="1100"
             height="824"
