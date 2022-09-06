@@ -7,6 +7,9 @@ export const config: Configuration = {
   mode: "silent",
   theme: {
     extend: {
+      fontFamily: {
+        jura: "jura, sans-serif",
+      },
       colors: {
         "ta_blue": "#07819C", //"#0886a3",
         "ta_link_blue": "#1bc1d3",
