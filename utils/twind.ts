@@ -1,5 +1,6 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { Configuration, setup } from "twind";
+import { apply, css } from "twind/css";
 export * from "twind";
 export * from "twind/css";
 export const config: Configuration = {
@@ -9,6 +10,7 @@ export const config: Configuration = {
     extend: {
       fontFamily: {
         jura: "'Jura', sans-serif",
+        opensans: "'Open Sans', sans-serif",
       },
       colors: {
         "ta_blue": "#07819C", //"#0886a3",
@@ -37,7 +39,17 @@ export const config: Configuration = {
         src: 'url(/fonts/Jura.woff2) format("woff2")',
         fontDisplay: "swap",
       },
+      {
+        fontFamily: "Open Sans",
+        fontWeight: "400",
+        src: 'url(/fonts/OpenSans.woff2) format("woff2")',
+        fontDisplay: "swap",
+      },
     ],
+    "time": css({
+      color: "#aaa",
+      fontSize: "11px",
+    }, apply("font-opensans")),
   },
 };
 if (IS_BROWSER) setup(config);

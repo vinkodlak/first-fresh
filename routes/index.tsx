@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h, JSX } from "preact";
 import { tw } from "@twind";
+import { Published } from "../components/Published.tsx";
 
 interface HeroFeaturedProps {
   uri: string;
@@ -131,7 +132,7 @@ const HeroFeatured = (
     <div
       class={tw`col-span-full md:col-span-5 h-[370px] overflow-hidden relative`}
     >
-      <a href={`/${uri}`}>
+      <a href={`${uri}`}>
         <picture>
           <source
             srcset={srcsetOri}
@@ -150,7 +151,7 @@ const HeroFeatured = (
         </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
           <div>{title}</div>
-          {/* <Published date={date} /> */}
+          <Published date={date} isWhite />
         </div>
       </a>
     </div>
@@ -164,7 +165,7 @@ const HeroItem = (
     <div
       class={tw`col-span-full md:col-span-2 h-[270px] md:h-[140px] overflow-hidden relative`}
     >
-      <a href={`/${uri}`}>
+      <a href={`${uri}`}>
         <picture>
           <source
             srcset={srcsetOri}
@@ -185,7 +186,6 @@ const HeroItem = (
         </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
           <div>{title}</div>
-          {/* <Published date={date} /> */}
         </div>
       </a>
     </div>
