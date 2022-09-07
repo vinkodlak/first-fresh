@@ -11,6 +11,10 @@ const customStyle = css({
   boxShadow: "0 0px 5px 4px rgba(0, 0, 0, 0.15)",
   zIndex: 150,
 
+  h1: {
+    height: "var(--logo_h)",
+  },
+
   li: {
     position: "relative",
     lineHeight: "60px",
@@ -31,26 +35,29 @@ const customStyle = css({
       transition: "transform 0.35s ease",
       transform: "scaleX(1)",
     },
-  },
 
-  a: {
-    display: "block",
-    color: "white",
-    padding: "0 14px",
+    a: {
+      display: "block",
+      color: "white",
+      padding: "0 14px",
+    },
   },
 });
 
 export const Header = (): JSX.Element => {
   return (
     <header class={tw`${customStyle}`}>
-      <a class={tw`invisible md:visible`} href="/">
-        <img
-          src="/images/Travel-Advisor-Logo.png"
-          width="272"
-          height="72"
-          alt="Travel Advisor"
-        />
-      </a>
+      <h1 class={tw`invisible md:visible flex items-center justify-center`}>
+        <a href="/">
+          <img
+            src="/images/Travel-Advisor-Logo.png"
+            width="272"
+            height="72"
+            alt="Travel Advisor"
+          />
+        </a>
+      </h1>
+
       <nav class={tw`grid grid-cols-main_grid_md bg-ta_blue`}>
         <div
           class={tw`col-start-2 col-span-12 flex items-center justify-between flex-wrap`}
