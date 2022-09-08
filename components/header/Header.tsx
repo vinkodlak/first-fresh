@@ -3,6 +3,7 @@ import { h, JSX } from "preact";
 import { css, theme, tw } from "@twind";
 import { FlagMenu } from "./FlagMenu.tsx";
 import { Menu } from "./Menu.tsx";
+import { Hamburger } from "./Hamburger.tsx";
 
 const customStyle = css({
   "--logo_h": "calc(3rem + 72px)",
@@ -47,7 +48,7 @@ const customStyle = css({
 export const Header = (): JSX.Element => {
   return (
     <header class={tw`${customStyle}`}>
-      <h1 class={tw`invisible md:visible flex items-center justify-center`}>
+      <h1 class={tw`hidden md:flex items-center justify-center`}>
         <a href="/">
           <img
             src="/images/Travel-Advisor-Logo.png"
@@ -58,10 +59,19 @@ export const Header = (): JSX.Element => {
         </a>
       </h1>
 
-      <nav class={tw`grid grid-cols-main_grid_md bg-ta_blue`}>
+      <nav class={tw`grid grid-cols-main_grid_md bg-black md:bg-ta_blue`}>
         <div
           class={tw`col-start-2 col-span-12 flex items-center justify-between flex-wrap`}
         >
+          <Hamburger />
+          <a href="/">
+            <img
+              src="/images/Travel-Advisor-Logo.png"
+              width="181"
+              height="48"
+              alt="Travel Advisor"
+            />
+          </a>
           <Menu />
           <FlagMenu />
         </div>

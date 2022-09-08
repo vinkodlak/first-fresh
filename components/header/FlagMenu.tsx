@@ -32,7 +32,7 @@ const UlLi = css(
 
 export const FlagMenu = (): JSX.Element => {
   return (
-    <ul class={tw`flex justify-around ${UlLi}`}>
+    <ul class={tw`hidden md:flex justify-around ${UlLi}`}>
       <Flag linkTo="/" imgSrc="/images/hr.png" alt="Hrvatski" />
       <Flag linkTo="/en/" imgSrc="/images/en.png" alt="English" />
       <Flag linkTo="/sr/" imgSrc="/images/sr.png" alt="Srpski" />
