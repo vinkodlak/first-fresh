@@ -2,6 +2,7 @@
 import { h, JSX } from "preact";
 import { css, tw } from "@twind";
 import { Published } from "../components/Published.tsx";
+import { Image } from "../components/Image.tsx";
 
 interface HeroFeaturedProps {
   uri: string;
@@ -125,35 +126,6 @@ const heroItems = [
   },
 ];
 
-const ImageWrapperStyle = css({
-  height: "100%",
-  // transform: "scale3d(1.05, 1.05, 1)",
-  transition: "transform 0.7s",
-
-  "&:before": {
-    content: "''",
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
-    height: "100%",
-    zIndex: 1,
-    background: "linear-gradient(\
-      to bottom,\
-      rgba(0, 0, 0, 0) 10%,\
-      rgba(0, 0, 0, 0.7) 100%\
-    )",
-    transition: "background-color 0.3s ease",
-  },
-
-  "&:hover, &:focus": {
-    transform: "scale3d(1.1, 1.1, 1)",
-
-    "&:before": {
-      backgroundColor: "rgba(0, 0, 0, 0.1)",
-    },
-  },
-});
-
 const HeroFeatured = (
   { uri, src, srcOri, srcset, srcsetOri, title, date }: HeroFeaturedProps,
 ): JSX.Element => {
@@ -162,25 +134,15 @@ const HeroFeatured = (
       class={tw`col-span-full md:col-span-5 h-[370px] overflow-hidden relative`}
     >
       <a href={`${uri}`}>
-        <div class={tw`${ImageWrapperStyle}`}>
-          <picture>
-            <source
-              srcset={srcsetOri}
-              sizes="(min-width: 768px) 46vw, 100vw"
-            />
-            <img
-              class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
-              loading="eager"
-              sizes="(min-width: 768px) 46vw, 100vw"
-              srcset={srcsetOri}
-              src={srcOri}
-              alt={title}
-              // @ts-ignore-ignore
-              fetchpriority="high"
-            />
-          </picture>
-        </div>
-
+        <Image
+          highPriority
+          src={srcOri}
+          title={title}
+          width={1100}
+          height={824}
+          sizes="(min-width: 768px) 46vw, 100vw"
+          srcset={srcsetOri}
+        />
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
           <h2>{title}</h2>
           <Published date={date} isWhite />
@@ -198,26 +160,14 @@ const HeroItem = (
       class={tw`col-span-full md:col-span-2 h-[270px] md:h-[140px] overflow-hidden relative`}
     >
       <a href={`${uri}`}>
-        <div class={tw`${ImageWrapperStyle}`}>
-          <picture>
-            <source
-              srcset={srcsetOri}
-              sizes="(min-width: 768px) 12vw, 100vw"
-            />
-            <img
-              class={tw`absolute t-0 l-0 w-full h-full object-cover object-center`}
-              loading="lazy"
-              sizes="(min-width: 768px) 12vw, 100vw"
-              srcset={srcsetOri}
-              src={srcOri}
-              alt={title}
-              width="1100"
-              height="824"
-              // @ts-ignore-ignore
-              // fetchpriority="high"
-            />
-          </picture>
-        </div>
+        <Image
+          src={srcOri}
+          title={title}
+          width={1100}
+          height={824}
+          sizes="(min-width: 768px) 12vw, 100vw"
+          srcset={srcsetOri}
+        />
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
           <h2>{title}</h2>
         </div>
