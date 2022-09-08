@@ -11,6 +11,7 @@ export const config: Configuration = {
       fontFamily: {
         jura: "'Jura', sans-serif",
         opensans: "'Open Sans', sans-serif",
+        roboto: "'Roboto', sans-serif",
       },
       colors: {
         "ta_blue": "#07819C", //"#0886a3",
@@ -31,7 +32,7 @@ export const config: Configuration = {
   },
   preflight: {
     // "@import":
-    //   "url(https://fonts.googleapis.com/css2?family=Jura&display=swap)",
+    //   "url(https://fonts.googleapis.com/css2?family=Roboto&display=swap)",
     "@font-face": [
       {
         fontFamily: "Jura",
@@ -45,11 +46,21 @@ export const config: Configuration = {
         src: 'url(/fonts/OpenSans.woff2) format("woff2")',
         fontDisplay: "swap",
       },
+      {
+        fontFamily: "Roboto",
+        fontWeight: "400",
+        src: 'url(/fonts/Roboto.woff2) format("woff2")',
+        fontDisplay: "swap",
+      },
     ],
     "time": css({
       color: "#aaa",
       fontSize: "11px",
     }, apply("font-opensans")),
+    "h1,h2,h3,h4,h5,h6": css({
+      fontSize: "inherit",
+      fontWeight: "inherit",
+    }, apply("font-roboto")),
   },
 };
 if (IS_BROWSER) setup(config);

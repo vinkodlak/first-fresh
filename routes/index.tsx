@@ -150,7 +150,7 @@ const HeroFeatured = (
           />
         </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
-          <div>{title}</div>
+          <h2>{title}</h2>
           <Published date={date} isWhite />
         </div>
       </a>
@@ -185,7 +185,7 @@ const HeroItem = (
           />
         </picture>
         <div class={tw`absolute text-white bottom-0 w-full z-10 p-2.5`}>
-          <div>{title}</div>
+          <h2>{title}</h2>
         </div>
       </a>
     </div>

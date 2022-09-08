@@ -32,6 +32,8 @@ export default function App(props: AppProps) {
         />
         <link rel="preconnect" href="https://images-ta.vinko.me" />
         <link rel="preload" as="font" href="/fonts/Jura.woff2" />
+        <link rel="preload" as="font" href="/fonts/OpenSans.woff2" />
+        <link rel="preload" as="font" href="/fonts/Roboto.woff2" />
       </Head>
       <Header />
       <div
