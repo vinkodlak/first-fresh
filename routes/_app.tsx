@@ -31,9 +31,27 @@ export default function App(props: AppProps) {
           crossOrigin="true"
         />
         <link rel="preconnect" href="https://images-ta.vinko.me" />
-        <link rel="preload" as="font" href="/fonts/Jura.woff2" />
-        <link rel="preload" as="font" href="/fonts/OpenSans.woff2" />
-        <link rel="preload" as="font" href="/fonts/Roboto.woff2" />
+        <link
+          rel="preload"
+          href="/fonts/Jura.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="true"
+        />
+        <link
+          rel="preload"
+          href="/fonts/OpenSans.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="true"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Roboto.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="true"
+        />
       </Head>
       <Header />
       <div
