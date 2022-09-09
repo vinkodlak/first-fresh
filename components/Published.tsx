@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { apply, css, tw } from "@twind";
 
 interface DateProps {

@@ -1,5 +1,4 @@
-/** @jsx h */
-import { h, JSX } from "preact";
+import { JSX } from "preact";
 import { css, theme, tw } from "@twind";
 import { FlagMenu } from "./FlagMenu.tsx";
 import { Menu } from "./Menu.tsx";

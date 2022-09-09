@@ -1,5 +1,4 @@
-/** @jsx h */
-import { h, JSX } from "preact";
+import { JSX } from "preact";
 import { css, tw } from "@twind";
 import { Published } from "../components/Published.tsx";
 import { Image } from "../components/Image.tsx";
