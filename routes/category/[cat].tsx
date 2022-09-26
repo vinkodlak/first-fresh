@@ -22,7 +22,7 @@ export const handler: Handlers<Post[] | null> = {
     );
     await client.connect();
     const object_result = await client.queryObject(
-      "SELECT * FROM 'Post' LIMIT 10",
+      "SELECT id,title,slug,date FROM Post LIMIT 10",
     );
     console.log(object_result.rows); // [{id: 1, name: 'Carlos'}, {id: 2, name: 'John'}, ...]
 
