@@ -17,16 +17,12 @@ interface Post {
 
 export const handler: Handlers<Post[] | null> = {
   async GET(_, ctx) {
-    const client = new Client({
-      user: PGUSER,
-      password: PGPASSWORD,
-      database: PGDATABASE,
-      hostname: PGHOST,
-      port: PGPORT,
-    });
+    const client = new Client(
+      "postgresql://postgres:changeme@94.250.202.137:5432/ta?schema=public",
+    );
     await client.connect();
     const object_result = await client.queryObject(
-      "SELECT * FROM posts2",
+      "SELECT * FROM 'Post' LIMIT 10",
     );
     console.log(object_result.rows); // [{id: 1, name: 'Carlos'}, {id: 2, name: 'John'}, ...]
 
