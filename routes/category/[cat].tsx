@@ -17,13 +17,17 @@ interface Post {
 
 export const handler: Handlers<Post[] | null> = {
   async GET(_, ctx) {
+    console.time("client");
     const client = new Client(
       "postgresql://postgres:changeme@94.250.202.137:5432/ta?schema=public",
     );
     await client.connect();
+    console.timeEnd("client");
+    console.time("query");
     const object_result = await client.queryObject(
-      `SELECT id,title,slug,date FROM "Post" LIMIT 10`,
+      `SELECT id,title,slug,date FROM "Post" ORDER BY date DESC LIMIT 10`,
     );
+    console.timeEnd("query");
     console.log(object_result.rows); // [{id: 1, name: 'Carlos'}, {id: 2, name: 'John'}, ...]
 
     await client.end();
